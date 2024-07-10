@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col gap-4 items-center justify-center h-screen bg-gray-100">
+    <h1 class="underline decoration-solid">CALCULATOR</h1>
+    <div class="w-80 bg-white rounded-lg shadow-lg p-6">
+        <div id="display" class="bg-gray-200 text-right text-2xl p-4 rounded mb-4">0</div>
+        <div class="grid grid-cols-4 gap-4">
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('7')">7</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('8')">8</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('9')">9</button>
+            <button class="bg-yellow-300 p-4 rounded text-lg" onclick="operate('÷')">÷</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('4')">4</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('5')">5</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('6')">6</button>
+            <button class="bg-yellow-300 p-4 rounded text-lg" onclick="operate('×')">×</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('1')">1</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('2')">2</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('3')">3</button>
+            <button class="bg-yellow-300 p-4 rounded text-lg" onclick="operate('-')">-</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('0')">0</button>
+            <button class="bg-gray-300 p-4 rounded text-lg" onclick="appendNumber('.')">.</button>
+            <button class="bg-red-300 p-4 rounded text-lg" onclick="clearDisplay()">C</button>
+            <button class="bg-yellow-300 p-4 rounded text-lg" onclick="operate('+')">+</button>
+            <button class="col-span-4 bg-green-300 p-4 rounded text-lg" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
